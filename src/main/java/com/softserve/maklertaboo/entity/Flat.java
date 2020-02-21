@@ -1,9 +1,11 @@
 package com.softserve.maklertaboo.entity;
 
+import com.softserve.maklertaboo.entity.photo.PhotoFlat;
 import lombok.Data;
 import lombok.Generated;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -11,7 +13,7 @@ public class Flat {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @OneToOne
     private Address address;
